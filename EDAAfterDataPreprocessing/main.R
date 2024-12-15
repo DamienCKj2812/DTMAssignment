@@ -1,6 +1,6 @@
 library(ggplot2) 
-
-data <- read.csv("./uncleaned_data.csv")
+D
+data <- read.csv("./cleaned_data.csv")
 str(data)
 
 # EDA on destination
@@ -75,10 +75,6 @@ carry_away_data_frame
 # EDA on RestaurantLessThan20
 restaurant_less_than_20_data_frame <- as.data.frame(table(data$RestaurantLessThan20, useNA = "ifany")) 
 restaurant_less_than_20_data_frame
-
-# EDA on Restaurant20To50
-restaurant_20_to_50_data_frame <- as.data.frame(table(data$Restaurant20To50, useNA = "ifany")) 
-restaurant_20_to_50_data_frame
 
 # EDA on Restaurant20To50
 restaurant_20_to_50_data_frame <- as.data.frame(table(data$Restaurant20To50, useNA = "ifany")) 

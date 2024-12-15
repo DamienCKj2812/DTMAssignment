@@ -4,7 +4,7 @@ library(dplyr)
 dataset <- read.csv("./uncleaned_data.csv")
 str(dataset)
 
-# Replace empty strings or whitespace-only values with NA
+D# Replace empty strings or whitespace-only values with NA
 replace_empty_with_na <- function(data) {
   data[] <- lapply(data, function(x) {
     if (is.character(x) || is.factor(x)) {
@@ -72,10 +72,9 @@ dataset$weather <- tolower(dataset$weather)
 dataset$time <- tolower(dataset$time)
 dataset$education <- tolower(dataset$education)
 
+dataset$age <- as.numeric(dataset$age)
 sum(is.na(dataset))
 
-min(dataset$temperature, na.rm = TRUE) 
-dataset$age <- as.numeric(dataset$age)
 
 # Apply the transformations and cleaning
 dataset <- dataset %>%
